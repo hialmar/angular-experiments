@@ -7,4 +7,25 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'book-shop';
+  bookName = 'eXtreme Programming Explained';
+  bookPictureUrl = 'https://robohash.org/xp?set=set4';
+  isAvailable = true;
+  isImportant = true;
+
+  bookList = [
+    {
+      name: 'eXtreme Programming Explained'
+    },
+    {
+      name: 'Clean Code'
+    }
+  ];
+
+  buy() {
+    console.log('test');
+  }
+
+  onDrop($event: any) {
+    console.log($event);
+  }
 }
