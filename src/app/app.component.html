@@ -1,10 +1,10 @@
-<div>
-  <span>{{ bookName }}</span>
+<div class="container"><div class="row"><div class="col-xs-12">
+  <div>
+  <H1>{{ bookName }}</H1>
 </div>
 <img
   [alt]="bookName"
   [src]="bookPictureUrl">
-
 <button
   type="button"
   [disabled]="!isAvailable">BUY</button>
@@ -21,7 +21,7 @@
 <div [class.wt-important]="isImportant">Important Stuff</div>
 
 
-<ul>
+<ul class="list-group">
   <li *ngFor="let book of bookList; let index = index; let isFirst = first; let isOdd = odd;">
     <span>{{ index }}</span>
     <span>:</span>
@@ -29,3 +29,6 @@
     <span>( isFirst: {{ isFirst }}, isOdd: {{ isOdd }} )</span>
   </li>
 </ul>
+
+  <router-outlet></router-outlet>
+</div> </div></div>

@@ -1,0 +1,17 @@
+<h2>Mes appareils</h2>
+<p>Mis à jour : {{ lastUpdate | async | date: 'EEEE d MMMM y' | uppercase }}</p>
+
+<ul class="list-group">
+  <wt-book-preview  *ngFor="let appareil of appareils; let i = index"
+                    [indexOfAppareil]="i"
+                    [appareilName]="appareil.name"
+                    [appareilStatus]="appareil.status"></wt-book-preview>
+</ul>
+
+<button class="btn btn-success"
+        [disabled]="!isAuth"
+        (click)="onAllumer()">Tout allumer</button>
+
+<button class="btn btn-danger"
+        [disabled]="!isAuth"
+        (click)="onEteindre()">Tout éteindre</button>
