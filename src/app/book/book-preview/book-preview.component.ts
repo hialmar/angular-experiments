@@ -12,6 +12,8 @@ export class BookPreviewComponent implements OnInit {
   @Input() appareilName: string;
   @Input() appareilStatus: string;
   @Input() indexOfAppareil: number;
+  @Input() index: number;
+  @Input() id: number;
 
   constructor(private appareilService: AppareilService) { }
 

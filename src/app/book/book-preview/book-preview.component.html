@@ -4,10 +4,13 @@
 <h4 [ngStyle]="{color: getColor()}">
 {{appareilName}}, Etat : {{appareilStatus}}
 </h4>
+  <a [routerLink]="[id]">Détail</a>
 <div style="width:20px;height:20px;background-color:red;"
      *ngIf="appareilStatus === 'éteint'"></div>
 <div>
-<input type="text" [(ngModel)]="appareilName">
+  <label>
+    <input type="text" [(ngModel)]="appareilName">
+  </label>
 </div>
 
   <button class="btn btn-success"
