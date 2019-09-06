@@ -37,6 +37,7 @@ export class AppareilViewComponent implements OnInit {
         this.appareils = appareils;
       }
     );
+    this.appareilService.getAppareilsFromServer();
     this.appareilService.emitAppareilSubject();
   }
 
