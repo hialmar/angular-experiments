@@ -18,6 +18,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import {UserService} from './services/user.service';
 import { NewUserComponent } from './new-user/new-user.component';
 import {HttpClientModule} from '@angular/common/http';
+import { ComposantComponent } from './composant/composant.component';
 
 const appRoutes: Routes = [
   {
@@ -52,7 +53,8 @@ const appRoutes: Routes = [
     FourOhFourComponent,
     EditAppareilComponent,
     UserListComponent,
-    NewUserComponent
+    NewUserComponent,
+    ComposantComponent
   ],
   imports: [
     BrowserModule,
